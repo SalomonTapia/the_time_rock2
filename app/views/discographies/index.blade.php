@@ -1,0 +1,1 @@
+/var/www/laravel/THE_TIME_ROCK/app/views/discographies/index.blade.php

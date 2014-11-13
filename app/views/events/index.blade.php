@@ -1,0 +1,1 @@
+/var/www/laravel/THE_TIME_ROCK/app/views/events/index.blade.php

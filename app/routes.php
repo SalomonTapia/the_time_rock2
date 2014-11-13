@@ -15,3 +15,20 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+Route::model('discographies','Discography');
+Route::model('events','Event');
+Route::model('news','News');
+Route::bind('news',function($value,$route){
+	return News::whereId($value)->first();
+});
+Route::bind('events',function($value,$route){
+	return Event::whereId($value)->first();
+});
+Route::bind('discographies',function($value,$route){
+	return Discography::whereId($value)->first();
+});
+
+Route::resource("discographies", "DiscographiesController");
+Route::resource('events','EventsController');
+Route::resource("users","UsersController");
+Route::resource("news","NewsController");
